@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spirited Away</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <!-- 上半部分：电影海报和标题 -->
+    <div class="text-center mt-5">
+      <h1 class="display-4 text-primary">Spirited Away</h1>
+      <img src="assets/d142c8f59b7fd0e1d2f45460a1427e2.jpg" class="img-fluid rounded mx-auto d-block" alt="Spirited Away Poster">
+    </div>
+    
+    <!-- 下半部分：描述和按钮 -->
+    <div class="mt-4">
+      <div class="text-center">
+        <p class="lead mb-4" id="movieDescription">Spirited Away tells the story of Chihiro, a young girl who finds herself trapped in a mysterious and magical world of spirits. To return to the human world, she must work in a bathhouse for the spirits and find her inner strength.</p>
+      </div>
+      
+      <div class="text-center">
+        <button class="btn btn-primary mx-2" onclick="showContent('description')">Description</button>
+        <button class="btn btn-success mx-2" onclick="showContent('cast')">Cast</button>
+        <button class="btn btn-warning mx-2" onclick="showContent('trivia')">Trivia</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showContent(contentType) {
+      const descriptionElement = document.getElementById('movieDescription');
+      
+      switch(contentType) {
+        case 'description':
+          descriptionElement.innerHTML = 'Spirited Away tells the story of Chihiro, a young girl who finds herself trapped in a mysterious and magical world of spirits. To return to the human world, she must work in a bathhouse for the spirits and find her inner strength.';
+          break;
+        case 'cast':
+          descriptionElement.innerHTML = 'Main Cast<br>Chihiro: Rumi Hiiragi<br>Haku: Miyu Irino<br>Yubaba: Mari Natsuki<br>Kamaji: Bunta Sugawara';
+          break;
+        case 'trivia':
+          descriptionElement.innerHTML = 'It is the only non-English language film to win the Academy Award for Best Animated Feature.<br>The movie was made without a script; Hayao Miyazaki wrote the story as he drew the storyboard!<br>Spirited Away overtook Titanic\'s box office record in Japan when released.';
+          break;
+      }
+    }
+  </script>
+</body>
+</html>
